@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-fastify-docker-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganochenkodg/nodejs-fastify-docker-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganochenkodg/nodejs-fastify-docker-template/issues"
+  },
+  "homepage": "https://github.com/ganochenkodg/nodejs-fastify-docker-template#readme",
+  "dependencies": {
+    "fastify": "^3.25.3",
+    "fastify-graceful-shutdown": "^3.1.0",
+    "fastify-metrics": "^8.0.0"
+  }
+}
