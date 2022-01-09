@@ -3,7 +3,7 @@ import metrics from 'fastify-metrics';
 import { port, host } from './config.js';
 import gracefulShutdown from 'fastify-graceful-shutdown';
 
-const app = fastify({ logger: true });
+export const app = fastify({ logger: true });
 app.register(metrics, {
   endpoint: '/metrics',
 });
@@ -22,3 +22,4 @@ app.listen(port, host, (err) => {
     process.exit(1);
   }
 });
+
