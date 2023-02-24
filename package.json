@@ -6,18 +6,17 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "ava"
+    "test": "ava",
+    "build": "docker build -t nodejs-fastify-template:latest .",
+    "docker-run": "docker run -p 3000:3000 nodejs-fastify-template"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ganochenkodg/nodejs-fastify-docker-template.git"
+    "url": "git+https://git.dganochenko.work/dganochenko/node-fastify-template.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ganochenkodg/nodejs-fastify-docker-template/issues"
-  },
-  "homepage": "https://github.com/ganochenkodg/nodejs-fastify-docker-template#readme",
+  "license": "MIT",
+  "homepage": "https://git.dganochenko.work/dganochenko/node-fastify-template/-/blob/main/README.md",
   "dependencies": {
     "fastify": "^3.25.3",
     "fastify-graceful-shutdown": "^3.1.0",
@@ -25,5 +24,8 @@
   },
   "devDependencies": {
     "ava": "^4.0.1"
+  },
+  "ava": {
+    "verbose": false
   }
 }

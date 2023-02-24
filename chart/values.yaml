@@ -1,0 +1,43 @@
+replicaCount: 1
+applicationName: "node-fastify-template"
+
+image:
+  repository: dganochenko/node-fastify-template 
+  tag: latest
+  pullPolicy: IfNotPresent 
+
+healthcheckPath: "/healthz"
+
+readinessProbe:
+  initialDelaySeconds: 1 
+  periodSeconds: 15
+  failureThreshold: 15
+  timeoutSeconds: 1
+livenessProbe:
+  initialDelaySeconds: 3
+  periodSeconds: 10
+  failureThreshold: 5
+  timeoutSeconds: 2
+
+additionalEnv: {}
+  # key: "value"
+
+ingress:
+# use letsencrypt for staging
+  hello:
+    domainName: "hello.dganochenko.work"
+    secretName: "hello.dganochenko.work"
+    annotations:
+      cert-manager.io/issuer: "letsencrypt-prod"
+      # key: "value"
+# additional upstream
+# staging-hello:
+#   domainName: "staging-hello.dganochenko.work"
+#   secretName: "staging-hello.dganochenko.work"
+#   #   annotations: {}
+
+resources:
+  limits:
+    memory: "512Mi"
+  requests:
+    memory: "128Mi"

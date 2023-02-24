@@ -22,4 +22,3 @@ app.listen(port, host, (err) => {
     process.exit(1);
   }
 });
-

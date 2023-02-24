@@ -1,0 +1,5 @@
+Access to application via urls:
+{{- range $key, $val := .Values.ingress }}
+  - {{ $val.domainName }}
+{{- end }}
+

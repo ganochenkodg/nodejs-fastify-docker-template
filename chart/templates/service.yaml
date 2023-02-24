@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Values.applicationName }}-upstream
+spec:
+  selector:
+    app: {{ .Values.applicationName }}
+  ports:
+    - port: 3000
